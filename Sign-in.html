@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>GDC_sign-in</title>
+    <link rel="icon" href="../miniprojet Web/images/controller.png"/>
+    <!--  css links   -->
+    <!--  Awesomefonts css link       -->
+    <link rel="stylesheet" href="../miniprojet Web/static_files/css/all.min.css">
+    <!--  Mystyle css file link & JQuery      -->
+    <link rel="stylesheet" href="../miniprojet Web/static_files/css/Mystyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+    <!--  The navigation bar of my page -->
+        <nav class="navbar">
+            <div class="topnav">
+                <a class="active" href="../miniprojet Web/index.html"><i class="fas fa-home fa-2x"></i></a>
+                <a href="../miniprojet Web/Sign-up.html"><i class="fas fa-user-plus fa-2x"></i></a>
+                <a href="../miniprojet Web/cv.html"><i class="fas fa-id-badge fa-2x"></i></a>
+                <a href="#about" class="info"><i class="fas fa-info-circle fa-2x"></i></a>
+                <div class="search-container">
+                    <form class="search">
+                      <a type="submit" style="margin: 6px 10px; padding: 14px 10px;"><i class="fa fa-search fa-sm"></i></a>
+                      <input type="text" placeholder="Search.." name="search">
+                    </form>
+                    <button type="button" class="B" style="color: rgb(228, 248, 136); background-color: #333;"><i class="fas fa-question-circle fa-2x"></i></button>
+                </div>
+            </div>
+        </nav>
+    <br>
+    <br>
+    <!--  Formulaire d'inscription -->
+    <div class="form">
+        <form class="form">
+            <fieldset>
+                <legend>Formulaire d'inscription : </legend>
+                <!-- La balise Table pour formater l'affichage du formulaire -->
+                <table>
+                    <tr>
+                        <td><label>Pseudo :</label></td>
+                        <td><input type="text" placeholder="saisir votre Pseudo" name="pseudo" id="pseudo" required/></td>
+                    </tr>
+                    <tr>
+                        <td><label>Email :</label></td>
+                        <td><input type="email" placeholder="saisir votre Email" name="mail" id="mail" required/></td>
+                    <tr>
+                        <td><label>Mot de passe :</label></td>
+                        <td><input type="mot de passe" placeholder="saisir votre mot de passe" name="password" id="password" required/></td>
+                    </tr>
+                    <tr style="text-align: center;">
+                        <td colspan="2">
+                            <input type="submit" value="Envoyer"/> 
+                            <input type="reset" value="Annuler"/>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+    <br>
+    <br>
+    <!--  The footer of my page         -->
+        <footer style="padding-top: 10px; padding-bottom: 10px;">
+            <small><i class="fas fa-dice-d6 fa-2x" style="color: rgb(0, 89, 255); padding-right: 2%;"></i>© Halloul Tarek, all rights reserved, 2021-2022</small>
+        </footer>
+    <!-- Optional JavaScript -->
+    <script> 
+    $(document).ready(function(){
+        $('.search').hide();
+    });
+    $(document).ready(function(){
+        $('.B').click(function(){
+            $('.search').toggle();
+        }); 
+    });
+    $(document).ready(function(){
+        $('.info').click(function(){
+            alert(" This web small project was created by :");
+            alert(" Halloul Tarek 3rd year CS_Student in EPI Polytechnique_sousse ");
+            alert(" this is an improvable projet...");
+            alert(" for more info, you can call +21694542535 or mail me at : halloultarek1@gmail.com ");
+        });
+    });
+    </script>
+    </body>
+</html>

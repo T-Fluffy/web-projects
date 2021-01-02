@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>GDC_sign-up</title>
+    <link rel="icon" href="../miniprojet Web/images/controller.png"/>
+    <!--  css links   -->
+    <!--            Awesomefonts css link       -->
+    <link rel="stylesheet" href="../miniprojet Web/static_files/css/all.min.css">
+    <!--            Mystyle css file link       -->
+    <link rel="stylesheet" href="../miniprojet Web/static_files/css/Mystyle.css">
+    </head>
+    <body>
+    <!--        The navigation bar of my page -->
+        <nav class="navbar">
+            <div class="topnav">
+                <a class="active" href="../miniprojet Web/index.html"><i class="fas fa-home fa-2x"></i></a>
+                <a href="../miniprojet Web/Sign-in.html"><i class="fas fa-sign-in-alt fa-2x"></i></a>
+                <a href="../miniprojet Web/cv.html"><i class="fas fa-id-badge fa-2x"></i></a>
+                <a type="text/button" onclick="showinfo()"><i class="fas fa-info-circle fa-2x"></i></a>
+            </div>
+        </nav>
+    <br><br>
+    <!--        Formulaire d'inscription -->
+    <div class="form">
+    <form id="form" name="form" action="mailto:halloultarek1@gmail.com" method="post" onSubmit="return verif_formulaire()">
+		<fieldset>
+			<legend>Formulaire d'inscription</legend>
+			<!-- La balise Table pour formater l'affichage du formulaire -->
+			<table>
+				<tr>
+                    <td><label>Nom :</label></td>
+                    <td><input type="text" size="40" placeholder="saisir votre nom" name="nom" id="nom" required/></td>
+                    
+				</tr>
+				<tr>
+                    <td><label>Prenom :</label></td>
+                    <td><input type="text" size="40" placeholder="saisir votre prenom" name="prenom" id="prenom" required/></td>
+                      
+                </tr>
+                <tr>
+                    <td><label>Pseudo :</label></td>
+                    <td><input type="text" size="40" placeholder="saisir votre Pseudo" name="pseudo" id="pseudo" required/></td>
+                    
+				</tr>
+				<tr>
+                    <td><label>Email :</label></td>
+                    <td><input type="email" placeholder="saisir votre Email" name="mail" id="mail" required/></td>
+                      
+				</tr>
+				<tr>
+					<td>Sexe :</td>
+                    <!-- Les deux inputs radio doivent avoir le meme nom -->
+					<td>
+						Masculin <input type="radio" name="sexe" value="M" checked="checked" name="sexe" id="sexe">
+						Féminin <input type="radio" name="sexe" value="F" name="sexe" id="sexe">
+                    </td>
+                       
+				</tr>
+				<tr>
+					<!-- Pour réstreindre le type des fichiers on utilise l'attribut "accept" -->
+                    <td><label>Photo :</label></td>
+                    <td><input type="file" accept="image/jpeg,image/png" name="Photo" id="Photo"></td>
+                    
+				</tr>
+				<tr>
+                    <td><label>Pays :</label></td>
+                  	<td>
+						<select name="Pays" id="Pays" required>
+                        <option>Tunisie</option>
+						<option>France</option>
+						<option>Espagne</option>
+                        <option>Italie</option>
+                        <option>chine</option>
+                        <option>amerique</option>
+                        <option>japon</option>
+                    </select>
+                       
+				</td>
+				</tr>
+				<tr>
+                    <!-- l'utilisation l'attribut multiple permet le choix de plusieurs valeurs des options -->
+                    <td>Les langages préferés :</td>
+                    <td><select multiple="multiple" name="langages" id="langages">
+						<option>Java</option>
+						<option>C</option>
+						<option>C++</option>
+						<option>PHP</option>
+                        <option>HTML</option>
+                        <option>C#</option>
+                        <option>C</option>
+                        <option>JS</option>
+                    </select>  
+                    
+                    </td>
+                    <td>(Pour faire plusieurs choix maintenir la touche CTRL enfoncée)</td>
+				</tr>
+				<tr>
+                    <td><label>Domaines d'activités :</label></td>                    
+                    <td>
+                        <input type="checkbox" name="Domaine" id="Domaine" > Informatique 
+                        <input type="checkbox" name="Domaine" id="Domaine" > Gestion 
+                        <input type="checkbox" name="Domaine" id="Domaine" > Pédagogie
+                        <input type="checkbox" name="Domaine" id="Domaine" > Aucun domaine spécifique
+                    </td>                    
+				</tr>
+                <tr>
+                    <td><label>Mot de passe :</label></td>
+                    <td><input type="mot de passe" size="40" placeholder="saisir votre mot de passe" name="password" id="password" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Confirmer votre Mot de passe :</label></td>
+                    <td><input type="mot de passe"  size="40" placeholder="saisir votre mot de passe" name="passwordconf" id="passwordconf" required/></td>
+                </tr>
+                <tr style="text-align: center;">
+                    <td colspan="2">
+                        <input type="submit" value="Envoyer" onclick="verif_formulaire()"/> 
+                        <input type="reset" value="Annuler"/>
+                    </td>
+                </tr>
+			</table>
+        </fieldset>
+    </form>
+    </div>
+    <!--        The footer of my page         -->
+        <footer style="padding-top: 10px; padding-bottom: 10px;">
+            <small><i class="fas fa-dice-d6 fa-2x" style="color: rgb(0, 89, 255); padding-right: 2%;"></i>© Halloul Tarek, all rights reserved, 2021-2022</small>
+        </footer>
+<!--        JavaScript -->
+<script type="text/javascript">
+var nom=document.getElementById('nom'); 
+var prenom=document.getElementById('prenom');
+var mail=document.getElementById('mail');
+var pseudo=document.getElementById('pseudo');
+var password=document.getElementById('password');
+var password2=document.getElementById('passwordconf');
+function verif_formulaire()
+{
+ if(nom.value == "")  {
+   alert("Veuillez entrer votre nom!");
+   nom.focus();
+   return false;
+  }
+  if(prenom.value == "")  {
+   alert("Veuillez entrer votre prenom!");
+   prenom.focus();
+   return false;
+  }
+ if(password.value == "") {
+   alert("Veuillez entrer votre mot de passe!");
+   password.focus();
+   return false;
+  }
+  if(password2.value == "") {
+   alert("Veuillez confirmer votre mot de passe!");
+   password2.focus();
+   return false;
+  }else{
+   alert("votre mot de passe n'est pas confirmé!");
+   alert("Priére de vérifier que votre mot de passe est bien réecrit");
+   password2.focus();
+   return false;
+  }
+ if(mail.value == "") {
+   alert("Veuillez mettre l'@!");
+   mail.focus();
+   return false;
+  }
+ if(mail.value.indexOf('@') == -1) {
+   alert("Veuillez mettre l'@!");
+   mail.focus();
+   return false;
+  }
+}
+function showinfo()
+  {
+    alert(" This web small project was created by :");
+    alert(" Halloul Tarek 3rd year CS_Student in EPI Polytechnique_sousse ");
+    alert(" this is an improvable projet...");
+    alert(" for more info, you can call +21694542535 or mail me at : halloultarek1@gmail.com ");
+  }
+</script>
+    </body>
+</html>

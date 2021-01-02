@@ -1,0 +1,178 @@
+@import /*importer des icons*/
+url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+*{	/*attribuer a tous les balises html une marge et un ecart null, une bordure, une police "Montserrat" sans empattement, et sans une forme de lists*/
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+list-style: none;
+font-family: 'Montserrat', sans-serif;	
+}
+body{ /* changer couleur de background et police de contunue de body */
+	background: #585c68;
+	font-size: 14px;
+	line-height: 22px;
+	color: #555555;
+}
+.bold { /* changer taille de police et la transforme en majiscule */
+	font-weight: 700;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.semi-bold { /*ajuster police */
+	font-weight: 500;
+	font-size: 16px;
+}
+.resume { /* ajuster et definir taille de template(cv) */
+	width: 800px;
+	height: auto;
+	display: flex;
+	margin: 50px auto;
+}
+.resume .resume_left {	/*Ajouter une couteur d'une nuance de rouge et une langeur de 280px pour la boite de contenu des class '.resumer' et '.resume_left' */
+	width: 280px;
+	background: #ff6982;
+}
+.resume .resume_left .resume_profile { /*  Ajouter une langeur  de 100% et une hauteur de 280px pour la boite de contenu des class '.resume','.resume_left' et '.resumer_profile' */
+	width: 100%;
+	height: 280px;
+}
+.resume .resume_left .resume_profile img {/*  Ajouter une langeur  de 100% et une hauteur de 100% pour la boite de contenu des class '.resume','.resume_left',la balise 'img' et '.resumer_profile' */
+	width: 100%;
+	height: 100%;
+}
+.resume .resume_left .resume_content {	/*definir un ecart de remplissage de 25px a droite et a gauche des class '.resumer', '.resumer_left' et '.resumer_content' */
+	padding: 0 25px;
+}
+.resume .title {	/* definit une marge basse de 20 px appliqué a la classe '.resume ' et ' .title' */
+	margin-bottom: 20px;
+}
+.resume .resume_left .bold { 	/* Appliquer une couleur blanche au class '.resume', '.resume_left' et '.bold'*/
+	color: #fff;
+}
+.resume .resume_item { /*ajoute un espacement de 25px en haut et en bas des elements avec une bordure   solide de  2px d'un faible nuance de blue */
+	padding: 25px 0;
+	border-bottom: 2px solid #b1eaff;
+}
+.resume .resume_left .resume_item:last-child,
+.resume .resume_right .resume_item:last-child { /* definit une bordure du cotté bas de 0 px */ 
+	border-bottom: 0px;	
+}
+.resume .resume_left ul li {	/*definit uhn affichage flex avec marge de 10px antre chaque element et un alignement centée*/ 
+	display: flex;
+	margin-bottom: 10px;
+	align-items: center;
+}
+.resume .resume_left ul li:last-child {	/* definie une marge en bas de chaque element de 0 */
+	margin-bottom: 0;
+}
+.resume .resume_left ul li .icon {	/* definir une hauteur et longeur de 35px d'une couleur blanche pour l'arrire plan,d'une couleur blue pour l'element ,d'une bordure de 50%, d'une marge de 15px,d'une taille de police 16px et d'une position relative pour chaque element*/
+	width: 35px;
+	height: 35px;
+	background: #fff;
+	color: #009fd9;
+	border-radius: 50%;
+	margin-right: 15px;
+	font-size: 16px;
+	position: relative;
+}
+.resume .icon i,
+.resume .resume_right .resume_hobby ul li i { /*attribuer une position absolute, placée de 50% a droite et a gauche de l'element le plus proche et enfin change de position des elements  de x =-50% et y=-50% */ 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.resume .resume_left ul li .data {	/* attribue une couleur blue au elments*/
+	color: #b1eaff;
+}
+.resume .resume_left .resume_skills ul li {	/*attribue un rendu ou affichage flexible, une marge en bas de 10px,une couleur blue, un espacement entre les element et alignement centré pour chaque element*/
+	display: flex;
+	margin-bottom: 10px;
+	color: #b1eaff;
+	justify-content: space-between;
+	align-items: center;
+}
+.resume .resume_left .resume_skills ul li .skill_name {	 /*attribue une longeur de 25%*/ 
+	width: 25%;
+}
+.resume .resume_left .resume_skills ul li .skill_progress {	/* attribue une longeur de 60%, une marge de 5px agauche et a droite,une hauteur de 5px, d'un arriere plan blue et une position relative pour chaque element*/ 
+	width: 60%;
+	margin: 0 5px;
+	height: 5px;
+	background: #009fd9;
+	position: relative;
+}
+.resume .resume_left .resume_skills ul li .skill_per { 	/*attribue une longeur de 15% pour les elementss*/
+	width: 15%;
+}
+.resume .resume_left .resume_skills ul li .skill_progress span {	 /*attribue une position absolue, une position 0 en haut et a gauche, d'une hauteur de 100% et d'un arriere plan blanc*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: #fff;
+}
+.resume .resume_right {	/*attribue une longeur de 520px, d'un arrire plan blanc et d'un espacement de 25px pour les elements*/ 
+	width: 520px;
+	background: #fff;
+	padding: 25px;
+}
+.resume .resume_right .bold { 	/*ajouter une couleur blue au elements*/ 
+	color: #0bb5f4;
+} 
+.resume .resume_right .resume_work ul,
+.resume .resume_right .resume_education ul {	/*attribuer un espacement de 40px a gauche et cacher son Le contenu est rogné si besoin pour s'inscrire dans la boîte de remplissage */
+	padding-left: 40px;
+	overflow: hidden;
+}
+.resume .resume_right ul li { /*attribuer un positionnement relative des elements */
+	position: relative;
+}
+.resume .resume_right ul li .date {	/*attribuer une taille de police de 16px,d'une longeur 500 et d'une marge en bas de 15px*/
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 15px;
+}
+.resume .resume_right ul li .info {		/*attribuer une marge en bas de 20px*/
+	margin-bottom: 20px;
+}
+.resume .resume_right ul li:last-child .info {	/*atribuer 0 marge en bas*/
+	margin-bottom: 0;
+}
+.resume .resume_right .resume_work ul li:after, 
+.resume .resume_right .resume_education ul li:after {/*attribuer un arriere plan blue, d'une longeur de 2px,d'une hauteur de 115px, d'un positionnemenyt en haut de 14px et a gauche de-21px d'un positionnemenyt absolue et enfin definir la generation de l'element apres ""*/
+	content: "";
+	position: absolute;
+	top: 14px;
+	left: -21px;
+	width: 2px;
+	height: 115px;
+	background: #0bb5f4;
+}
+.resume .resume_right .resume_hobby ul { /* definit un rendu flex avec un espace entre chaque element des class et balise */
+	display: flex;
+	justify-content: space-between;
+}
+.resume .resume_right .resume_hobby ul li {	/*attribuer une langeur et hauteur de 80px avec une solide bordure de 2px de couleur blue d'un radius de 50% dont la propriété de position calculée est relative*/
+	width: 80px;
+	height: 80px;
+	border: 2px solid #0bb5f4;
+	border-radius: 50%;
+	position: relative;
+	color: #0bb5f4;
+}
+.resume .resume_right .resume_hobby ul li i{ /*deffinit une taille de police de 30px pour les classes resume, .resume_right, .resume_hobby et balises ul li et i*/ 
+	font-size: 30px;
+}
+.resume .resume_right .resume_hobby ul li:before {	/*attribuer une couleur d'arrire plan blue, une hauteur de 2px et 50px de largeur, d'une position en haut de 40px et de -52px a droite de son parent le plus proche une hauteur de 50px, pour la boite de contenu des class .resume .resume_right .resume_hobby et balises ul et li avant derniere*/
+	content: "";
+	position: absolute;
+	top: 40px;
+	right: -52px;
+	width: 50px;
+	height: 2px;
+	background: #0bb5f4;
+}
+.resume .resume_right .resume_hobby ul li:last-child:before { /*aucun type d'affichage n'est attribuer au class resume, resume_right, resume_hobby, balise ul et la avant derniere balise li affiché*/
+	display: none;
+}
